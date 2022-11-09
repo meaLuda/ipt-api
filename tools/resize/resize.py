@@ -41,7 +41,7 @@ class ResizeTool:
         return (w,h,channel)
 
     def resize(self,new_w,new_h):
-        new_img_nearest = np.array(Image.fromarray(self.image_array).resize((new_h, new_w), Image.Resampling.NEAREST))
+        new_img_nearest = np.array(Image.fromarray(self.image_array).resize((new_h, new_w), Image.Resampling.BILINEAR))
         return new_img_nearest
 
     
@@ -55,16 +55,16 @@ class ResizeTool:
         # input_image = cv2.imread(local_img_path)
         
         input_image  = self.image_array
-        new_image_array = self.resize(500,500)
+        new_image_array = self.resize(256,256)
         #subplot(r,c) provide the no. of rows and columns
-        f, axarr = plt.subplots(2,2) 
         # To debug what is actually fed to network
+        image_datas = [input_image,new_image_array]
         if debug:
-            for ax in axarr:
-                # use the created array to output your multiple images. In this case I have stacked 4 images vertically
-                ax.imshow(input_image, interpolation='none')
-                ax.imshow(new_image_array, interpolation='none')
-                plt.show(block=True)
+            f, axarr = plt.subplots(2,2)
+            axarr[0,0].imshow(image_datas[0])
+            axarr[0,1].imshow(image_datas[1])
+
+            plt.show()
         
 
 if __name__ == "__main__":
