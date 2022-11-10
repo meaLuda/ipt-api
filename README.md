@@ -23,7 +23,9 @@ TODO:                                               Deadline        Done?
 
 [How you can quickly deploy your ML models with FastAPI](https://towardsdatascience.com/how-you-can-quickly-deploy-your-ml-models-with-fastapi-9428085a87bf)
 
---- 
+[Image Processing Using Numpy: With Practical Implementation And Code](https://www.analyticsvidhya.com/blog/2021/05/image-processing-using-numpy-with-practical-implementation-and-code/#:~:text=It%20is%20used%20in%20the,%2DImage%2C%20and%20many%20more.)
+
+---
 
 <h2> Code Snippets </h2>
 
